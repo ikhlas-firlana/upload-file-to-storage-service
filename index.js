@@ -8,17 +8,10 @@ const s3 = new AWS.S3({
     accessKeyId: config.AccessKey,
     secretAccessKey: config.SecretKey
 });
-// const params = {
-//     Bucket: config.Bucket,
-// };
 
-// s3.createBucket(params, function(err, data) {
-//     if (err) console.log(err, err.stack);
-//     else     console.log(data);
-// });
 const params = {
     Bucket: config.Bucket,
-    Key: "file.ext",
+    Key: config.PATH + "/file.ext",
     Body: "The contents of the file.",
     ACL: "private",
     Metadata: {
@@ -30,3 +23,12 @@ s3.putObject(params, function(err, data) {
     if (err) {console.log(err, err.stack);}
     else     {console.log(data);}
 });
+const expireSeconds = 60 * 5
+
+const url = s3.getSignedUrl('getObject', {
+    Bucket: config.Bucket,
+    Key:  config.PATH + '/file.ext',
+    Expires: expireSeconds
+});
+
+console.log(url);

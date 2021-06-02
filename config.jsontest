@@ -2,5 +2,6 @@
   "AccessKey" : "",
   "SecretKey" : "",
   "DomainStorage" : "",
-  "Bucket" : ""
+  "Bucket" : "",
+  "PATH" : "sound-ui"
 }
