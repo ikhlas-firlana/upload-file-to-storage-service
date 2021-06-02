@@ -1,0 +1,22 @@
+{
+  "name": "upload-file-to-storage-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikhlas-firlana/upload-file-to-storage-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikhlas-firlana/upload-file-to-storage-service/issues"
+  },
+  "homepage": "https://github.com/ikhlas-firlana/upload-file-to-storage-service#readme",
+  "dependencies": {
+    "aws-sdk": "^2.919.0"
+  }
+}
